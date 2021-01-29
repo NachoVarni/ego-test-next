@@ -1,0 +1,25 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 235px;
+  // border: 1px solid red;
+  margin-right: 2px;
+  margin-left: 2px;
+  margin-bottom: 75px;
+  padding: 0px 0px;
+
+  .productName {
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  .productYear {
+    margin-top: 8px;
+  }
+
+  .productPic {
+    width: 235px;
+  }
+}
