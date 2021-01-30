@@ -1,0 +1,43 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-top: 150px;
+  margin-left: 150px;
+
+
+  .imgWrapper {
+    margin-left: -50px;
+    .image {
+      width: 559px;
+      height: 320px;
+    }
+  }
+  
+  .descWrapper {
+    
+
+    .name {
+      font-family: Montserrat;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .title {
+      font-family: Montserrat;
+      font-size: 50px;
+      font-weight: 600;
+    }
+
+    .desc {
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: normal;
+      margin: 37px 90px 0 0;
+      width: 385px;
+      line-height: 1.69;
+      letter-spacing: -0.1px;
+      color: #373737;
+    }
+  }
+}

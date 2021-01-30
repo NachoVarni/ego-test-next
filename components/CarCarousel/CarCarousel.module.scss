@@ -1,0 +1,25 @@
+.carousel {
+  background-color: red;
+  margin: 123px 50px;
+  width: 90%; 
+  
+  .card {
+    text-align: left;
+    margin: 0px 11px;
+    max-width: 270px;
+
+    .name {
+      font-family: Montserrat;
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .description {
+      font-family: Montserrat;
+      font-size: 16px;
+      line-height: 1.69;
+    }
+  }
+}

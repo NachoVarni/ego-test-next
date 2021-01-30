@@ -15,9 +15,12 @@
   .sideHeader {
     margin-right: 27px;
     margin-top: 18px;
-    
+    display: flex;
+    align-items: center;
+
     .sideCerrar {
       margin-right: 11px;
+      
     }
   }
 

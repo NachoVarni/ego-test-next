@@ -8,7 +8,7 @@ import { FilteredCarsProvider } from '../../Context/FilteredCarsContext'
 export default function Hero() {
  
   const [filteredAndSortedData, setFilteredAndSortedData] = useState([])
-  
+    
   const context = useContext(FieldContext)
   const {products} = context
 
@@ -19,7 +19,8 @@ export default function Hero() {
   
   const filter = (button) => {
     //FILTERS  
-    
+    // setIsActive(button)
+
     if (button === 'Todos') {
       
       setFilteredAndSortedData([...products])
@@ -51,9 +52,6 @@ export default function Hero() {
     }
     else if (type === 'cheaper') {
       setFilteredAndSortedData(sortedDescendent);
-      
-      
-      
     }
     else if (type === 'newest') {
       setFilteredAndSortedData(sortedAscendent);
@@ -70,7 +68,8 @@ export default function Hero() {
     filteredAndSortedData,
     filter,
     products,
-    sortArray
+    sortArray,
+    
   }
 
 

@@ -11,7 +11,7 @@ function Models() {
   
   async function fetchData() {
     const data = await axios.get('https://challenge.agenciaego.tech/models')
-    
+    console.log(data.data)
     setProducts(() => data.data)
     const allSegments = ['Todos', ...new Set(data.data.map(car => car.segment))]
     setButtons(allSegments)  

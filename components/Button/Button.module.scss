@@ -10,22 +10,25 @@
     border: none;
     margin-right: 27px;
 
-    // &:hover {
-    //   background-color: #f7f7f7;
-    // }
-
-    &:active, &:hover {
-      background-color: #f7f7f7;
-      
-    }
-
-    .active {
+    &:hover {
       background-color: #f7f7f7;
     }
   }
 
+  .Autos {
+    background-color: red;
+  }
+
+  .Pickups{
+
+  }
+
+  .SUVs {
+
+  }
+
   .active {
-    background-color: #f7f7f7;
+    background-color: red;
   }
 
 }

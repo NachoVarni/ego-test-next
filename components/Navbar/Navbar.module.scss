@@ -16,41 +16,28 @@
     display: flex;
     align-items: center;
 
-    .models {
-      padding: 26px 32px;
-    }
-  
-  
-  
-    .active {
+    .selected  {
       color: #eb0a1e;
       border-bottom: 2px solid #d0021b;
-      
     }
     
-    // .modelosLink {
-    //   padding: 27px 31px 25px 33px;
-    //   color: #191919;
+    .models {
+      padding: 27px 31px 25px 33px;
+      color: #191919;
+      margin-left: 77px;
       
-    //   &:active {
-    //     color: #eb0a1e;
-    //     border-bottom: 2px solid #d0021b;
-    //   }
+    }
 
-    //   &:hover {
-    //     border-bottom: 2px solid red;
-    //   }
-    // }
-
-    // .fichaLink {
-    //   padding: 27px 31px 25px 33px;
-    //   color: #191919;
-
-      
-    //   &:hover {
-    //     border-bottom: 2px solid red;
-    //   }
-    // }
+    .info {
+      padding: 27px 31px 25px 33px;
+      color: #191919;
+    }
+  
+  
+    .selected {
+      color: #eb0a1e;
+      border-bottom: 2px solid #d0021b;
+    }
   }
 
   .rightHeader {
@@ -70,9 +57,7 @@
   
 }
 
-// a {
-//   text-decoration: none;
-// }
+
 
 .backdrop {
   pointer-events: none;
@@ -85,3 +70,4 @@
   background-color: rgba(0,0,0,.70);
   transition: all .4s ease-in-out;
 }
+

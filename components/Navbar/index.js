@@ -22,22 +22,26 @@ function Navbar() {
       {!showSide && 
         <div className={styles.navbar}> 
           <ul className={styles.leftHeader}>
-            <li>
-              
+            
+            <Link href='/'>  
+                <li>
                 <Logo src='/assets/logo.png' alt='ego' width={20} height={20} className={styles.logo} />
-              
-            </li>
-            <li className={router.pathname == "/" ? "models active" : "models"}>
-                
-                Modelos
-              
-            </li>
-            <li className={router.pathname == "/" ? "info active" : "info"}>
-              <Link href='/ficha/1'>
-                Ficha de modelo
+                </li>
               </Link>
-            </li>
+            
+            <Link href='/'>
+              <li className={router.pathname == "/" ? `${styles.models} ${styles.selected}` : styles.models}>
+                Modelos
+              </li>
+            </Link>
+            
+            <Link href='/ficha/1'>
+              <li className={router.pathname != "/" ? `${styles.info} ${styles.selected}` : styles.info}>
+                Ficha de modelo
+              </li>
+            </Link>
           </ul>
+          
           <div className={styles.rightHeader} onClick={handleClick}>
             <span className={styles.menu}>Menu</span>
             <Hamburguer src='/assets/gray.png' alt='menu' width={25} height={18} className={styles.menuImg} />
@@ -47,7 +51,7 @@ function Navbar() {
       }
 
       {showSide && <SideNavbar handleClick={handleClick} />}
-      {showSide && <div className='backdrop'></div>}
+      {showSide && <div className={styles.backdrop}></div>}
     </>
   )
 }
