@@ -1,19 +1,34 @@
 import styles from './SideNavbar.module.scss'
 import Cross from 'next/image'
+import Logo from 'next/image'
+import Link from 'next/link'
+import Hamburguer from 'next/image'
 
 function SideNavbar({handleClick}) {
   
   
 
   return(
-    <div className={styles.sideNavbar}>
-      <header className={styles.sideHeader}>
-        <div onClick={handleClick}>
-          <span className={styles.sideCerrar}>Cerrar</span>
-          <Cross src={'/assets/fill-1.png'} alt='cerrar' width={15} height={15} className={styles.sideCross} />
+    <>
+      {/* <div className={styles.navbar}> 
+        <Link href='/'>  
+              
+          <Logo src='/assets/logo.png' alt='ego' width={38} height={38} className={styles.logo} />
+              
+        </Link>
+        <div className={styles.menuImg}>    
+          <Hamburguer src='/assets/gray.png' alt='menu' width={28} height={20}  />
         </div>
-      </header>
-      <ul className={styles.sideList}>
+      </div> */}
+
+      <div className={styles.sideNavbar}>
+        <header className={styles.sideHeader}>
+          <div onClick={handleClick}>
+            <span className={styles.sideCerrar}>Cerrar</span>
+            <Cross src={'/assets/fill-1.png'} alt='cerrar' width={15} height={15} className={styles.sideCross} />
+          </div>
+        </header>
+        <ul className={styles.sideList}>
           <li className={styles.listText}>Modelos</li>
           <li className={styles.listText}>Servicios y Accesorios</li>
           <li className={styles.listText}>Financiacion</li>
@@ -36,9 +51,9 @@ function SideNavbar({handleClick}) {
             <li className={styles.listText}>Acerca de...</li>
           </div>
         </ul>
-      
+        
     </div>
-    
+    </>
   
   )
 }

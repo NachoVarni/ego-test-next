@@ -25,7 +25,7 @@ function Navbar() {
             
             <Link href='/'>  
               <li>
-              <Logo src='/assets/logo.png' alt='ego' width={20} height={20} className={styles.logo} />
+                <Logo src='/assets/logo.png' alt='ego' width={20} height={20} className={styles.logo} />
               </li>
             </Link>
             
@@ -50,9 +50,20 @@ function Navbar() {
         </div>
       }
 
+      <div className={styles.responsiveNavbar}> 
+        <div className={styles.responsiveLogo}>
+          <Link href='/' >  
+            <Logo src='/assets/logo.png' alt='ego' width={38} height={38}  />
+          </Link>
+        </div>
+        
+        <div className={styles.responsiveMenuImg} onClick={handleClick}>    
+          <Hamburguer src='/assets/gray.png' alt='menu' width={28} height={20} display='block' />
+        </div>
+      </div>
+
       {showSide && 
         <>
-          <Navbar />
           <SideNavbar handleClick={handleClick} />
         </>
       }

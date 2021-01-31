@@ -10,12 +10,21 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   width: 100%;
+
+  @media (max-width: 812px) {
+    display: none;
+  }
   
   .leftHeader {
     margin-left: 35px;
     display: flex;
     align-items: center;
 
+    .logo {
+      height: 20px;
+      width: 20px;
+    }
+    
     .selected  {
       color: #eb0a1e;
       border-bottom: 2px solid #d0021b;
@@ -54,27 +63,30 @@
     }
   }
 
- @media (max-width: 812px) {
-   height: 70px;
-
-   .logo {
-     height: 38px;
-     width: 39px;
-   }
-   
-   .models {
-     display: none;
-   }
-
-   .info {
-     display: none;
-   }
-
-   .menu {
-     display: none;
-   }
- }
+ 
+ 
   
+}
+
+.responsiveNavbar {
+  display: none;
+  
+  @media (max-width: 812px) {
+    display: flex;
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    
+    .responsiveLogo {
+      margin-left: 15px;
+    }
+
+    .responsiveMenuImg {
+      margin-right: 15px;
+    }
+  }
 }
 
 
