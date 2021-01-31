@@ -81,15 +81,13 @@
     font-family: Montserrat;
     font-size: 20px;
     font-weight: normal;
-    position: fixed;
+    position: relative;
+    right: 0px;
     left: 0px;
+    width: 812px;
     
     .sideHeader {
-      
-      .sideCerrar {
-        position: relative;
-        right: 53px;
-      }
+      right: 53px;
     }
 
     .sideList {
@@ -107,8 +105,9 @@
       }
   
       .listLineWrapper {
-        min-width: 390px;
-        margin: 31px 0px;
+        width: 100%;
+        left: 18px;
+        right: 20px;
         
         
         .listLine {
