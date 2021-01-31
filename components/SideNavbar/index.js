@@ -1,6 +1,5 @@
 import styles from './SideNavbar.module.scss'
 import Cross from 'next/image'
-import React from 'react'
 
 function SideNavbar({handleClick}) {
   

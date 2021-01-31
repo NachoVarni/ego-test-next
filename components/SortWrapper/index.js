@@ -1,5 +1,5 @@
 import styles from './SortWrapper.module.scss'
-import React, { useState, useEffect, useContext } from 'react';
+import { useContext } from 'react';
 import FilteredCarsContext from '../../Context/FilteredCarsContext'
 
 function SortWrapper() {

@@ -5,6 +5,13 @@ import Hero from '../Hero'
 import {FieldProvider} from '../../Context/FieldContext'
 import Select from '../Select'
 
+const options = [
+  { value: 'blues', label: 'Blues' },
+  { value: 'rock', label: 'Rock' },
+  { value: 'jazz', label: 'Jazz' },
+  { value: 'orchestra', label: 'Orchestra' } 
+];
+
 function Models() {
   
   const [products, setProducts] = useState([])
@@ -27,14 +34,14 @@ function Models() {
   const fieldData = {
     products,
     buttons,
-    
+    options
   }
   
   return(
     <FieldProvider value={fieldData}>
       <Navbar />
       <Hero />
-      <Select />
+      {/* <Select /> */}
     </FieldProvider>
   )
 }

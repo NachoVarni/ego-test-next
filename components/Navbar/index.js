@@ -24,10 +24,10 @@ function Navbar() {
           <ul className={styles.leftHeader}>
             
             <Link href='/'>  
-                <li>
-                <Logo src='/assets/logo.png' alt='ego' width={20} height={20} className={styles.logo} />
-                </li>
-              </Link>
+              <li>
+              <Logo src='/assets/logo.png' alt='ego' width={20} height={20} className={styles.logo} />
+              </li>
+            </Link>
             
             <Link href='/'>
               <li className={router.pathname == "/" ? `${styles.models} ${styles.selected}` : styles.models}>
@@ -35,11 +35,11 @@ function Navbar() {
               </li>
             </Link>
             
-            <Link href='/ficha/1'>
+            
               <li className={router.pathname != "/" ? `${styles.info} ${styles.selected}` : styles.info}>
                 Ficha de modelo
               </li>
-            </Link>
+            
           </ul>
           
           <div className={styles.rightHeader} onClick={handleClick}>
@@ -50,7 +50,12 @@ function Navbar() {
         </div>
       }
 
-      {showSide && <SideNavbar handleClick={handleClick} />}
+      {showSide && 
+        <>
+          <Navbar />
+          <SideNavbar handleClick={handleClick} />
+        </>
+      }
       {showSide && <div className={styles.backdrop}></div>}
     </>
   )

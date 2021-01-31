@@ -54,6 +54,26 @@
     }
   }
 
+ @media (max-width: 812px) {
+   height: 70px;
+
+   .logo {
+     height: 38px;
+     width: 39px;
+   }
+   
+   .models {
+     display: none;
+   }
+
+   .info {
+     display: none;
+   }
+
+   .menu {
+     display: none;
+   }
+ }
   
 }
 
@@ -69,5 +89,9 @@
   z-index: 1;
   background-color: rgba(0,0,0,.70);
   transition: all .4s ease-in-out;
+
+  @media (max-width: 812px) {
+    display: none;
+  }
 }
 

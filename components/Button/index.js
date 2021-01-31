@@ -1,7 +1,7 @@
 import styles from './Button.module.scss'
 import FieldContext from '../../Context/FieldContext'
 import FilteredCarsContext from '../../Context/FilteredCarsContext'
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 
 export default function Button() {
   

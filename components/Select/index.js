@@ -1,33 +1,38 @@
+import FieldContext from '../../Context/FieldContext'
+import {useContext} from 'react'
+
 const customStyles = {
-  menu: (provided, state) => ({
+  option: (provided, state) => ({
     ...provided,
-    width: state.selectProps.width,
-    borderBottom: '1px dotted pink',
-    color: state.selectProps.menuColor,
-    padding: 20,
+    borderBottom: '2px dotted green',
+    color: state.isSelected ? 'yellow' : 'black',
+    backgroundColor: state.isSelected ? 'green' : 'white'
   }),
-
-  control: (_, { selectProps: { width }}) => ({
-    width: width
-  }),
-
-  singleValue: (provided, state) => {
-    const opacity = state.isDisabled ? 0.5 : 1;
-    const transition = 'opacity 300ms';
-
-    return { ...provided, opacity, transition };
-  }
+  control: (provided) => ({
+    ...provided,
+    marginTop: "5%",
+  })
 }
 
   export default function Select() {
     
+    const context = useContext(FieldContext)
+    const {options} = context
+
     return(
-      <Select
-      styles={customStyles}
-      width='200px'
-      menuColor='red'
+      // <select
+      //   styles={customStyles}
+      //   options={options}
+      // />
+      <select>
+        {options.map((option) => {
+          return <option value={option.value}>{option.label}</option>
+        })}
+      </select>  
       
-      />
+      
+      
+        
     )
     
   }
