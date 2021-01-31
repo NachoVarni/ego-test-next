@@ -13,7 +13,7 @@ export default function Product({product}) {
           <h4 className={styles.productName}>{product.name}</h4>
         </Link>
         <span className={styles.productYear}>{product.year} | ${product.price}</span>
-        <img src={product.photo} alt='car' className={styles.productPic} />
+        <img src={`https://challenge.agenciaego.tech${product.photo}`} alt='car' className={styles.productPic} />
       </div>
     
   )

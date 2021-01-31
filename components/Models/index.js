@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import Navbar from '../Navbar'
 import Hero from '../Hero'  
 import {FieldProvider} from '../../Context/FieldContext'
+import Select from '../Select'
 
 function Models() {
   
@@ -11,7 +12,6 @@ function Models() {
   
   async function fetchData() {
     const data = await axios.get('https://challenge.agenciaego.tech/models')
-    console.log(data.data)
     setProducts(() => data.data)
     const allSegments = ['Todos', ...new Set(data.data.map(car => car.segment))]
     setButtons(allSegments)  
@@ -34,6 +34,7 @@ function Models() {
     <FieldProvider value={fieldData}>
       <Navbar />
       <Hero />
+      <Select />
     </FieldProvider>
   )
 }

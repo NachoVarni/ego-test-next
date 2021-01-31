@@ -8,7 +8,6 @@ export default function CarData() {
   const context = useContext(DataSheetContext)
   const {model} = context
   
-  console.log(model)
 
   return(
     <div className={styles.wrapper}>

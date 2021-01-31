@@ -1,8 +1,11 @@
 .carousel {
-  background-color: red;
+  background-color: transparent;
   margin: 123px 50px;
-  width: 90%; 
+  width: 95%;
+  text-align: center;
   
+  
+
   .card {
     text-align: left;
     margin: 0px 11px;
@@ -23,3 +26,49 @@
     }
   }
 }
+
+.slickArrow {
+  background-color: transparent;
+  position: absolute;
+  bottom: 50%;
+  width: 12px;
+  height: 21px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+}
+
+.slickPrev {
+  
+  left: -10px;
+
+  &:after {
+    transform: translateX(-50%) translateX(-2px) translateY(-50%);
+    border-width: 9px 12px 9px 0;
+    border-color: transparent black transparent transparent;
+  }
+}
+
+  
+
+
+.slickNext {
+  
+  right: -10px;
+
+  &:after {
+    transform: translateX(-50%) translateX(2px) translateY(-50%);
+    border-width: 9px 0 9px 12px;
+    border-color: transparent transparent transparent black;
+  }
+}
+

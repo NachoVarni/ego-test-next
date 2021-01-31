@@ -9,18 +9,18 @@ export default function DataSheet() {
   
   const [model, setModel] = useState([])
   const [features, setFeatures] = useState([])
-  
+  const [highlights, setHighlights] = useState([])
   const location = useRouter()
   const path = location.asPath
-  
   const fullHash = path.split('/')
   const id = fullHash[2]
   
-
   async function fetchModel() {
     const data = await axios.get(`https://challenge.agenciaego.tech/models/${id}`)
     setModel(() => data.data)
+    setHighlights(data.data.model_highlights)
     setFeatures(() => data.data.model_features)
+    console.log(data.data)
   }
 
   useEffect(() => {
@@ -29,7 +29,8 @@ export default function DataSheet() {
   
   const context = {
     model,
-    features
+    features,
+    highlights
   }
 
   return(

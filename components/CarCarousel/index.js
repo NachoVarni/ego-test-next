@@ -9,8 +9,7 @@ function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
+      className={`${styles.slickNext} ${styles.slickArrow}`}
       onClick={onClick}
     />
   );
@@ -20,8 +19,7 @@ function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={className}
-      style={{ ...style, display: "block", background: "black", color: 'black' }}
+      className={`${styles.slickPrev} ${styles.slickArrow}`}
       onClick={onClick}
     />
   );
@@ -33,13 +31,12 @@ export default function CarCarousel() {
   
   const context = useContext(DataSheetContext)
   const {features} = context
-  console.log(features)
 
   return (
     <div className={styles.carousel}>
       <Carousel 
         dots={true}
-        slidesToShow={3}
+        slidesToShow={4}
         slidesToScroll={2}
         autoplay={false}
         autoplaySpeed={3000}

@@ -1,0 +1,71 @@
+.hero {
+  margin: 0px 150px;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  
+    .textWrapper {
+      // align-items: center;
+      padding: 0px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
+      text-align: left;
+  
+      .title {
+        font-family: Montserrat;
+        font-size: 20px;
+        
+        font-weight: 600;
+      }
+  
+      .text {
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1.69;
+        letter-spacing: -0.1px;
+        color: #373737;
+        margin-top: 13px;
+      }
+    }
+  
+    .imageWrapper {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      
+      .image {
+        width: 100%;
+        height: 295px;
+        text-align: right;
+      }
+    }
+  }
+  
+  .two {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 55px;
+    margin-bottom: 117px;
+  
+    .textWrapper{
+      padding: 0px 40px;
+    }
+  
+    .imageWrapper {
+      width: 50%;
+      display: flex;
+      justify-content: flex-start;
+      margin-right: 21px;
+    }
+  }
+  
+  
+
+}
+
