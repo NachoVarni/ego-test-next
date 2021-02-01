@@ -5,8 +5,10 @@ import {useRouter} from 'next/router'
 import axios from 'axios'
 import {DataSheetProvider} from '../../Context/DataSheetContext'
 
-export default function DataSheet() {
+export default function DataSheet({modelStatic}) {
   
+  console.log(modelStatic)
+
   const [model, setModel] = useState([])
   const [features, setFeatures] = useState([])
   const [highlights, setHighlights] = useState([])
@@ -47,3 +49,4 @@ export default function DataSheet() {
     </DataSheetProvider>
   )
 }
+

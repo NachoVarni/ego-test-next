@@ -4,8 +4,10 @@ import Navbar from '../Navbar'
 import Hero from '../Hero'  
 import {FieldProvider} from '../../Context/FieldContext'
 
-function Models() {
+function Models({modelStatic}) {
   
+  console.log(modelStatic)
+
   const [products, setProducts] = useState([])
   const [buttons, setButtons] = useState([])
   const [showSideNav, setShowSideNav] = useState(false)

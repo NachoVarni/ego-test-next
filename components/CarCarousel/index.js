@@ -4,6 +4,7 @@ import Carousel from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from './CarCarousel.module.scss'
+import Image from 'next/image'
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -22,6 +23,8 @@ function SamplePrevArrow(props) {
       className={`${styles.slickPrev} ${styles.slickArrow}`}
       onClick={onClick}
     />
+      
+    
   );
 }
 
