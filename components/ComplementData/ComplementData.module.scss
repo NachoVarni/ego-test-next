@@ -1,11 +1,21 @@
 .hero {
   margin: 0px 150px;
 
+  @media (max-width: 812px) {
+    margin-top: 138px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
   .wrapper {
     display: flex;
     align-items: center;
     width: 100%;
   
+    @media (max-width: 812px) {
+      flex-direction: column-reverse;
+    }
+    
     .textWrapper {
       // align-items: center;
       padding: 0px 40px;
@@ -14,12 +24,20 @@
       justify-content: center;
       width: 50%;
       text-align: left;
+
+      @media (max-width: 812px) {
+        padding: 0px;
+        width: 100%;
+      }
   
       .title {
         font-family: Montserrat;
         font-size: 20px;
-        
         font-weight: 600;
+
+        @media (max-width: 812px) {
+          margin-top: 21px
+        }
       }
   
       .text {
@@ -30,6 +48,10 @@
         letter-spacing: -0.1px;
         color: #373737;
         margin-top: 13px;
+
+        @media (max-width: 812px) {
+          margin-top: 20px
+        }
       }
     }
   
@@ -43,6 +65,14 @@
         height: 295px;
         text-align: right;
       }
+
+      @media (max-width: 812px) {
+        width: 100%;
+
+        .image {
+          height: 199px;
+        }
+      }
     }
   }
   
@@ -52,9 +82,19 @@
     align-items: center;
     margin-top: 55px;
     margin-bottom: 117px;
+    text-align: center;
   
+    @media (max-width: 812px) {
+      flex-direction: column-reverse;
+    }
+
     .textWrapper{
       padding: 0px 40px;
+
+      @media (max-width: 812px) {
+        padding: 0px;
+        width: 100%;
+      }
     }
   
     .imageWrapper {
@@ -62,6 +102,15 @@
       display: flex;
       justify-content: flex-start;
       margin-right: 21px;
+
+      @media (max-width: 812px) {
+        width: 100%;
+        margin: 0px;
+
+        .image {
+          height: 199px;
+        }
+      }
     }
   }
   

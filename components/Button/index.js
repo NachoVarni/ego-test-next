@@ -5,24 +5,18 @@ import { useContext, useState } from 'react'
 
 export default function Button() {
   
-  const [isActive, setIsActive] = useState(false)
-  
   const fieldData = useContext(FieldContext)
   const filterData = useContext(FilteredCarsContext)
   const {buttons} = fieldData
-  const {filter} = filterData
+  const {filter, sortArray} = filterData
   
   
-  function handleChangeColor() {
-    setIsActive(true)
-  }
-
   return(
     <>
       {buttons.map((cat, key) => {
         return(
           <div key={key} className={styles.wrapper}>
-            <button onClick={() => filter(cat)} className={`${styles.button}`}>{cat}</button>
+            <button onClick={() => sortArray(cat)} className={`${styles.button}`}>{cat}</button>
           </div>
         )
       })}

@@ -1,73 +1,77 @@
 import styles from './Navbar.module.scss'
-import Logo from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
-import Hamburguer from 'next/image'
 import SideNavbar from '../SideNavbar'
-import { useState } from 'react'
+import { useContext } from 'react'
 import {useRouter} from 'next/router'
+import FieldContext from '../../Context/FieldContext'
 
-function Navbar() {
-  
-  const [showSide, setShowSide] = useState(false)
-
-  function handleClick() {
-    setShowSide((prevState) => !prevState)
-    
-  }
+function Navbar({handleShowSide, showSideNav}) {
   
   const router = useRouter()
+  // const context = useContext(FieldContext)
+  // const {showSideNav, handleShowSide} = context
 
   return(
     <>
-      {!showSide && 
+      {!showSideNav && 
         <div className={styles.navbar}> 
-          <ul className={styles.leftHeader}>
-            
-            <Link href='/'>  
-              <li>
-                <Logo src='/assets/logo.png' alt='ego' width={20} height={20} className={styles.logo} />
+            <ul className={styles.leftHeader}>
+              <li className={styles.logoWrapper}>
+                <Link href='/'>  
+                  <div className={styles.logo}>
+                    <Image src='/assets/logo.png' alt='ego' layout='fill' objectFit='contain'  />
+                  </div>
+                </Link>
               </li>
-            </Link>
-            
-            <Link href='/'>
               <li className={router.pathname == "/" ? `${styles.models} ${styles.selected}` : styles.models}>
-                Modelos
+                <Link href='/'>
+                
+                  Modelos
+                
+                </Link>
               </li>
-            </Link>
+              
+              
+                <li className={router.pathname != "/" ? `${styles.info} ${styles.selected}` : styles.info}>
+                  Ficha de modelo
+                </li>
+              
+            </ul>
             
-            
-              <li className={router.pathname != "/" ? `${styles.info} ${styles.selected}` : styles.info}>
-                Ficha de modelo
-              </li>
-            
-          </ul>
-          
-          <div className={styles.rightHeader} onClick={handleClick}>
-            <span className={styles.menu}>Menu</span>
-            <Hamburguer src='/assets/gray.png' alt='menu' width={25} height={18} className={styles.menuImg} />
+            <div className={styles.rightHeader} onClick={() => handleShowSide()}>
+              <span className={styles.menu}>Menu</span>
+              <div className={styles.menuImg}>
+                <Image src='/assets/gray.png' alt='menu' layout='fill' objectFit='contain'  />
+              </div>
+            </div>
           </div>
-
-        </div>
       }
-
-      <div className={styles.responsiveNavbar}> 
-        <div className={styles.responsiveLogo}>
-          <Link href='/' >  
-            <Logo src='/assets/logo.png' alt='ego' width={38} height={38}  />
-          </Link>
-        </div>
-        
-        <div className={styles.responsiveMenuImg} onClick={handleClick}>    
-          <Hamburguer src='/assets/gray.png' alt='menu' width={28} height={20} display='block' />
-        </div>
-      </div>
-
-      {showSide && 
+      
+      {showSideNav && 
+        <div className={styles.responsiveNavbar}> 
+            <div className={styles.responsiveLogo}>
+              <Link href='/'>  
+                <div className={styles.responsiveImg}>
+                  <Image src='/assets/logo.png' alt='ego' layout='fill' objectFit='contain'  />
+                </div>
+              </Link>
+            </div>
+            <div className={styles.responsiveMenuImg}>
+              <Image src='/assets/gray.png' alt='menu' layout='fill' objectFit='contain'  />
+            </div>
+          </div>
+      }    
+          
+      {showSideNav && 
         <>
-          <SideNavbar handleClick={handleClick} />
+          <SideNavbar handleShowSide={handleShowSide} />
+          <div className={styles.backdrop}></div>
         </>
       }
-      {showSide && <div className={styles.backdrop}></div>}
+      
+
+      
     </>
   )
 }

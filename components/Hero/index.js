@@ -5,6 +5,8 @@ import FieldContext from '../../Context/FieldContext'
 import React, { useContext, useEffect, useState } from 'react'
 import { FilteredCarsProvider } from '../../Context/FilteredCarsContext'
 
+const orderBy = ['Mas caro', 'Mas barato', 'Mas nuevo', 'Mas viejo']
+
 export default function Hero() {
  
   const [filteredAndSortedData, setFilteredAndSortedData] = useState([])
@@ -16,49 +18,41 @@ export default function Hero() {
     setFilteredAndSortedData(products)  
   }, [products])
 
-  
-  const filter = (button) => {
-    //FILTERS  
-    // setIsActive(button)
-
-    if (button === 'Todos') {
+  const sortArray = type => {
+     
+    if (type === 'Todos') {
       
       setFilteredAndSortedData([...products])
       
     }
-    else {
-      const filteredData = products.filter(car => car.segment === button);
+    else if (
+      type === 'Autos' ||
+      type === 'Pickups y Comerciales' ||
+      type === 'SUVs y Crossovers' 
+      ) {
+      const filteredData = products.filter(car => car.segment === type);
     
       setFilteredAndSortedData(filteredData)
     }
     
-  }
+    const sortedAscendentPrice = [...filteredAndSortedData].sort((a, b) => b.price - a.price);
+    const sortedDescendentPrice = [...filteredAndSortedData].sort((a, b) => a.price - b.price);
+    const sortedAscendentYear = [...filteredAndSortedData].sort((a, b) => b.year - a.year);
+    const sortedDescendentYear = [...filteredAndSortedData].sort((a, b) => a.year - b.year);
 
-  const sortArray = type => {
-    const types = {
-      moreExpensive: 'price',
-      cheaper: 'price',
-      newest: 'year',  
-      oldest: 'year',
-    };
-    const sortProperty = types[type];
-    
-    const sortedAscendent = [...filteredAndSortedData].sort((a, b) => b[sortProperty] - a[sortProperty]);
-    const sortedDescendent = [...filteredAndSortedData].sort((a, b) => a[sortProperty] - b[sortProperty]);
-
-    if (type === 'moreExpensive') {
-      setFilteredAndSortedData(sortedAscendent)
+    if (type === 'Mas caro') {
+      setFilteredAndSortedData(sortedAscendentPrice)
       
     }
-    else if (type === 'cheaper') {
-      setFilteredAndSortedData(sortedDescendent);
+    else if (type === 'Mas barato') {
+      setFilteredAndSortedData(sortedDescendentPrice);
     }
-    else if (type === 'newest') {
-      setFilteredAndSortedData(sortedAscendent);
+    else if (type === 'Mas nuevo') {
+      setFilteredAndSortedData(sortedAscendentYear);
       
     }
-    else if (type === 'oldest') {
-      setFilteredAndSortedData(sortedDescendent);
+    else if (type === 'Mas viejo') {
+      setFilteredAndSortedData(sortedDescendentYear);
     }
   };
   
@@ -66,10 +60,9 @@ export default function Hero() {
 
   const filteredCarsData = {
     filteredAndSortedData,
-    filter,
     products,
     sortArray,
-    
+    orderBy
   }
 
 

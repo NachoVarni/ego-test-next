@@ -1,31 +1,20 @@
 import styles from './SideNavbar.module.scss'
-import Cross from 'next/image'
-import Logo from 'next/image'
-import Link from 'next/link'
-import Hamburguer from 'next/image'
+import Image from 'next/image'
+import FieldContext from '../../Context/FieldContext'
+import {useContext} from 'react'
 
-function SideNavbar({handleClick}) {
+function SideNavbar({handleShowSide}) {
   
   
-
   return(
     <>
-      {/* <div className={styles.navbar}> 
-        <Link href='/'>  
-              
-          <Logo src='/assets/logo.png' alt='ego' width={38} height={38} className={styles.logo} />
-              
-        </Link>
-        <div className={styles.menuImg}>    
-          <Hamburguer src='/assets/gray.png' alt='menu' width={28} height={20}  />
-        </div>
-      </div> */}
-
       <div className={styles.sideNavbar}>
         <header className={styles.sideHeader}>
-          <div onClick={handleClick}>
-            <span className={styles.sideCerrar}>Cerrar</span>
-            <Cross src={'/assets/fill-1.png'} alt='cerrar' width={15} height={15} className={styles.sideCross} />
+          <div onClick={handleShowSide} className={styles.sideCloseWrapper}>
+            <span className={styles.sideClose}>Cerrar</span>
+            <div className={styles.sideCross}>
+              <Image src={'/assets/cross.png'} alt='cerrar' layout='fill' objectFit='contain' />
+            </div>
           </div>
         </header>
         <ul className={styles.sideList}>

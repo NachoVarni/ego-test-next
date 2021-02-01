@@ -4,6 +4,12 @@
   margin-top: 150px;
   margin-left: 150px;
 
+  @media (max-width: 812px) {
+    flex-direction: column;
+    margin-top: 110px;
+    margin-left: 0px;
+    justify-content: center;
+  }
 
   .imgWrapper {
     margin-left: -50px;
@@ -11,11 +17,26 @@
       width: 559px;
       height: 320px;
     }
+    
+    @media (max-width: 812px) {
+      text-align: center;
+      margin: 0px;
+      width: 100%;
+
+      .image {
+        width: 345px;
+        height: 199px;
+      }
+    }
+
   }
   
   .descWrapper {
-    
 
+    @media (max-width: 812px) {
+      margin: 42px 15px 0px 15px;
+    }
+    
     .name {
       font-family: Montserrat;
       font-size: 20px;
@@ -25,7 +46,7 @@
 
     .title {
       font-family: Montserrat;
-      font-size: 50px;
+      font-size: 35px;
       font-weight: 600;
     }
 
@@ -38,6 +59,11 @@
       line-height: 1.69;
       letter-spacing: -0.1px;
       color: #373737;
+
+      @media (max-width: 812px) {
+        width: 100%;
+        margin-top: 19px;       
+      }
     }
   }
 }

@@ -10,22 +10,29 @@ export default function DataSheet() {
   const [model, setModel] = useState([])
   const [features, setFeatures] = useState([])
   const [highlights, setHighlights] = useState([])
+  const [showSideNav, setShowSideNav] = useState(false)
+
+  const handleShowSide = () => {
+    setShowSideNav((prevState) => !prevState)
+  }
+  
   const location = useRouter()
-  const path = location.asPath
-  const fullHash = path.split('/')
-  const id = fullHash[2]
+  const id = location.query.ficha
   
   async function fetchModel() {
     const data = await axios.get(`https://challenge.agenciaego.tech/models/${id}`)
-    setModel(() => data.data)
+    
+    setModel(data.data)
     setHighlights(data.data.model_highlights)
-    setFeatures(() => data.data.model_features)
-    console.log(data.data)
+    setFeatures(data.data.model_features)
+    
   }
 
   useEffect(() => {
-    fetchModel()
-  }, [])
+    if (id) {
+      fetchModel()
+    }
+  }, [id])
   
   const context = {
     model,
@@ -35,8 +42,8 @@ export default function DataSheet() {
 
   return(
     <DataSheetProvider value={context} >
-      <Navbar />
-      <DataSheetHero />
+      <Navbar showSideNav={showSideNav} handleShowSide={handleShowSide} />
+      {!showSideNav && <DataSheetHero />}
     </DataSheetProvider>
   )
 }

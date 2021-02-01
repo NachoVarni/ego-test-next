@@ -5,7 +5,7 @@ import FilteredCarsContext from '../../Context/FilteredCarsContext'
 function SortWrapper() {
   
   const context = useContext(FilteredCarsContext)
-  const {sortArray, filteredAndSortedData} = context
+  const {sortArray} = context
   
   return (
     <div className={styles.wrapper}>

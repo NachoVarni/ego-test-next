@@ -3,13 +3,27 @@
   margin: 123px 50px;
   width: 95%;
   text-align: center;
-  
-  
 
+  @media (max-width: 812px) {
+    margin-bottom: 0px
+  }
+  
   .card {
     text-align: left;
     margin: 0px 11px;
     max-width: 270px;
+
+    @media (max-width: 812px) {
+      width: 100%;
+      max-width: none;
+      margin: 0px;
+      padding: 15px;
+
+      .image {
+        margin: 0px;
+        width: 100%;
+      }
+    }
 
     .name {
       font-family: Montserrat;
@@ -24,6 +38,7 @@
       font-size: 16px;
       line-height: 1.69;
     }
+
   }
 }
 

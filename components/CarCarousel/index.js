@@ -44,16 +44,16 @@ export default function CarCarousel() {
         nextArrow= {<SampleNextArrow />}
         prevArrow= {<SamplePrevArrow />}
 
-        // responsive = {[
-        //   {
-        //     breakpoint: 812,
-        //     settings: {
-        //       slidesToShow: 3,
-        //       slidesToScroll: 3,
-        //       arrows: false
-        //     }
-        //   }
-        // ]}
+        responsive = {[
+          {
+            breakpoint: 812,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false
+            }
+          }
+        ]}
         
       >
         {features.map((feature, key) => {
