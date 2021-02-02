@@ -1,7 +1,7 @@
 .wrapper {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  
+
   .button {
     border-radius: 40px;
     background-color: white;
@@ -10,25 +10,17 @@
     border: none;
     margin-right: 27px;
 
+    &:focus {
+      outline: none;
+    }
+
     &:hover {
       background-color: #f7f7f7;
     }
   }
+}
 
-  .Autos {
-    background-color: red;
-  }
-
-  .Pickups{
-
-  }
-
-  .SUVs {
-
-  }
-
-  .active {
-    background-color: red;
-  }
-
+.active .button {
+  background-color: #f7f7f7;
+  border: none;
 }

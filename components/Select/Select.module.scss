@@ -1,32 +1,25 @@
 .customSelect {
   position: relative;
   font-family: Arial;
-  width: 99px;
+  width: 170px;
   border: none;
   font-size: 14px;
-  
-  
+  text-align: right;
+
   .selectButton {
     background-color: white;
-    width: 99px;
+    width: 100%;
     border: none;
-    padding: 5px;
+    padding-left: 55px;
+    right: 5px;
   }
 
   .optionButton {
     position: absolute;
     background-color: white;
     top: 100%;
-    width: 100px;
     left: 0;
     right: 0;
     z-index: 99;
-    
   }
-
-  
 }
-
-
-
-

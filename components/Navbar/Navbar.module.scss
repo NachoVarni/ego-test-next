@@ -12,7 +12,6 @@
   width: 100%;
 
   @media (max-width: 812px) {
-    
     .models {
       display: none;
     }
@@ -25,7 +24,7 @@
       display: none;
     }
   }
-  
+
   .leftHeader {
     margin-left: 35px;
     display: flex;
@@ -36,10 +35,9 @@
     }
 
     .logoWrapper {
-      
       .logo {
-        height: 20px;
-        width: 20px;
+        height: 38px;
+        width: 40px;
         position: relative;
 
         @media (max-width: 812px) {
@@ -48,26 +46,23 @@
         }
       }
     }
-    
-    
-    .selected  {
+
+    .selected {
       color: #eb0a1e;
       border-bottom: 2px solid #d0021b;
     }
-    
+
     .models {
       padding: 27px 31px 25px 33px;
       color: #191919;
       margin-left: 77px;
-      
     }
 
     .info {
       padding: 27px 31px 25px 33px;
       color: #191919;
     }
-  
-  
+
     .selected {
       color: #eb0a1e;
       border-bottom: 2px solid #d0021b;
@@ -98,14 +93,9 @@
       }
     }
   }
-
- 
- 
-  
 }
 
 .responsiveNavbar {
-  
   @media (max-width: 812px) {
     display: flex;
     position: fixed;
@@ -115,7 +105,7 @@
     align-items: center;
     z-index: 110000;
     background-color: white;
-    
+
     .responsiveLogo {
       margin-left: 15px;
 
@@ -124,7 +114,6 @@
         height: 30px;
         position: relative;
       }
-      
     }
 
     .responsiveMenuImg {
@@ -136,8 +125,6 @@
   }
 }
 
-
-
 .backdrop {
   pointer-events: none;
   position: fixed;
@@ -148,10 +135,9 @@
   z-index: 1;
   // background-color: rgba(0,0,0,.70);
   background-color: black;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 
   @media (max-width: 812px) {
     display: none;
   }
 }
-

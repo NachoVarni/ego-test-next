@@ -5,11 +5,11 @@
   align-items: center;
   margin-top: 62px;
   margin-bottom: 9px;
-  
+
   @media (max-width: 812px) {
     display: none;
   }
-  
+
   .filterListLeft {
     display: flex;
     flex-direction: row;
@@ -20,55 +20,13 @@
       border-radius: 18px;
       margin-right: 45px;
     }
-
-    .filterAll {
-      margin-left: 64px;
-      border-radius: 18px;
-      padding: 8px 18px 9px 19px;
-        
-      &:hover {
-        background-color: #f7f7f7;
-      }
-    }
-
-    .filterCars {
-      margin-left: 63px;
-      padding: 8px 18px 9px 19px;
-      border-radius: 18px;
-      
-      &:hover {
-        background-color: #f7f7f7;
-      }
-    }
-    
-    .filterPickups {
-      margin-left: 45px;
-      padding: 8px 18px 9px 19px;
-      border-radius: 18px;
-        
-      &:hover {
-        background-color: #f7f7f7;
-      }
-    }
-
-    .filterSuvs {
-      margin-left: 45px;
-      padding: 8px 18px 9px 19px;
-      border-radius: 18px;
-      
-      &:hover {
-        background-color: #f7f7f7;
-      }
-    }
   }
 
   .filterListRight {
     display: flex;
     flex-direction: row;
     align-items: center;
-
   }
-
 }
 
 .responsiveWrapper {

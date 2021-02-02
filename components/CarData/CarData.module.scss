@@ -17,7 +17,7 @@
       width: 559px;
       height: 320px;
     }
-    
+
     @media (max-width: 812px) {
       text-align: center;
       margin: 0px;
@@ -28,15 +28,13 @@
         height: 199px;
       }
     }
-
   }
-  
-  .descWrapper {
 
+  .descWrapper {
     @media (max-width: 812px) {
       margin: 42px 15px 0px 15px;
     }
-    
+
     .name {
       font-family: Montserrat;
       font-size: 20px;
@@ -62,7 +60,7 @@
 
       @media (max-width: 812px) {
         width: 100%;
-        margin-top: 19px;       
+        margin-top: 19px;
       }
     }
   }

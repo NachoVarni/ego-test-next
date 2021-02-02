@@ -1,5 +1,5 @@
-import Models from '../components/Models'
-import Head from '../components/Head'
+import Models from '../components/Models';
+import Head from '../components/Head';
 
 export default function Home() {
   return (
@@ -7,5 +7,5 @@ export default function Home() {
       <Head />
       <Models />
     </>
-  )
+  );
 }
