@@ -1,18 +1,18 @@
 .wrapper {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  width: 100%;
   margin-top: 150px;
-  margin-left: 150px;
 
   @media (max-width: 812px) {
     flex-direction: column;
     margin-top: 110px;
-    margin-left: 0px;
-    justify-content: center;
   }
 
   .imgWrapper {
-    margin-left: -50px;
+    margin-right: 118px;
+
     .image {
       width: 559px;
       height: 320px;
@@ -31,6 +31,8 @@
   }
 
   .descWrapper {
+    max-width: 475px;
+
     @media (max-width: 812px) {
       margin: 42px 15px 0px 15px;
     }
@@ -52,8 +54,7 @@
       font-family: Montserrat;
       font-size: 16px;
       font-weight: normal;
-      margin: 37px 90px 0 0;
-      width: 385px;
+      margin-top: 37px;
       line-height: 1.69;
       letter-spacing: -0.1px;
       color: #373737;

@@ -20,19 +20,21 @@
 
     .sideCloseWrapper {
       display: flex;
-      
+
+      &:hover {
+        cursor: pointer;
+      }
+
       .sideClose {
         margin-right: 11px;
       }
-  
+
       .sideCross {
         width: 15px;
         height: 15px;
         position: relative;
       }
     }
-
-    
   }
 
   .sideList {
@@ -55,14 +57,12 @@
       text-align: right;
       margin-right: 53px;
       margin-bottom: 0px;
-      
     }
 
     .listLineWrapper {
       min-width: 390px;
       margin: 31px 0px;
-      
-      
+
       .listLine {
         border-top: 1px solid #e9e9e9;
         min-width: 338px;
@@ -84,7 +84,6 @@
       padding-top: 31px;
       padding-bottom: 200px;
     }
-    
   }
 
   @media (max-width: 812px) {
@@ -96,36 +95,32 @@
     right: 0px;
     left: 0px;
     bottom: 0px;
-    
-    
+
     .sideHeader {
-      right: 53px;
+      right: 27px;
 
       .sideCross {
-        margin-right: 27px;
       }
     }
 
     .sideList {
       width: 100%;
-      
+
       .listText {
         margin-right: 53px;
         margin-bottom: 13px;
       }
-  
+
       .last {
         margin-right: 53px;
         margin-bottom: 0px;
-        
       }
-  
+
       .listLineWrapper {
         width: 100%;
         left: 18px;
         right: 20px;
-        
-        
+
         .listLine {
           border-top: 1px solid #e9e9e9;
           min-width: 338px;
@@ -133,13 +128,13 @@
           margin-left: 32px;
         }
       }
-  
+
       .bottom {
         min-width: 390px;
         margin: 31px 0px;
         margin-bottom: 0px;
       }
-  
+
       .coloredList {
         background-color: #efeeef;
         width: 100%;

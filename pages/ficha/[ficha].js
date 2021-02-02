@@ -1,15 +1,9 @@
-import Navbar from '../../components/Navbar' 
-import DataSheet from '../../components/DataSheet'
-import axios from 'axios'
+import DataSheet from '../../components/DataSheet';
 
 export default function ficha() {
-  
-  
-
-  return(
+  return (
     <>
       <DataSheet />
     </>
-  )
+  );
 }
-

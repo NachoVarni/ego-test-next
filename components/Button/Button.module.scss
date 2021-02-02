@@ -4,7 +4,7 @@
 
   .button {
     border-radius: 40px;
-    background-color: white;
+    background-color: transparent;
     padding: 9px 18px;
     color: #373737;
     border: none;
@@ -16,6 +16,7 @@
 
     &:hover {
       background-color: #f7f7f7;
+      cursor: pointer;
     }
   }
 }

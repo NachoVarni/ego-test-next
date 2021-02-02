@@ -1,44 +1,28 @@
-import React, { Component, useState } from 'react';
 import Select from 'react-select';
-import FieldContext from '../../Context/FieldContext';
-import FilteredCarsContext, { FilteredCarsProvider } from '../../Context/FilteredCarsContext';
+import FilteredCarsContext from '../../Context/FilteredCarsContext';
 import { useContext } from 'react';
-
-// export default function Select({ options, defaultValue }) {
-//   return (
-//     <div className={styles.customSelect}>
-//       <select defaultValue="selected" className={styles.selectButton} onChange={(e) => sortArray(e.target.value)}>
-//         <option value="" disabled style={styles} className={`${styles.optionButton} ${styles.default}`}>
-//           {defaultValue}
-//         </option>
-//         {options.map((option, i) => {
-//           return (
-//             <option key={i} value={option} className={`${styles.optionButton}`}>
-//               {option}
-//             </option>
-//           );
-//         })}
-//       </select>
-//     </div>
-//   );
-// }
+import styles from './CustomSelect.module.scss';
 
 const customStyles = {
   option: (provided, state) => ({
     ...provided,
-    borderBottom: '1px dotted pink',
-    color: state.isSelected ? 'red' : 'blue',
-    width: 500,
+    backgroundColor: state.isSelected ? 'rgba(209, 214, 214, 0.2)' : '',
+    color: 'black',
+    width: '170px',
     position: 'relative',
-    padding: '20px 5px',
+    textAlign: 'left',
+    padding: '10px 16px',
+    fontSize: '12px',
   }),
   control: () => ({
-    // none of react-select's styles are passed to <Control />
     width: 170,
+    paddingLeft: '0px',
+    textAlign: 'right',
     display: 'flex',
-    backgroundColor: 'white',
     fontSize: '14px',
+    position: 'relative',
     fontWeight: 600,
+    zIndex: 9999,
   }),
   singleValue: (provided, state) => {
     const opacity = state.isDisabled ? 0.5 : 1;
@@ -48,34 +32,22 @@ const customStyles = {
   },
 };
 
-// Un render atrasado y se soluciona
-
 export default function customSelect({ options, defaultValue }) {
-  const [selectedVal, setSelectedVal] = useState(null);
-
-  function handleChange(selectedOption) {
-    setSelectedVal(selectedOption.value);
-    console.log(selectedVal);
-  }
-
-  function handleSort() {
-    sortArray(selectedVal);
-  }
-
-  function onClick() {
-    console.log('click');
-  }
-
   const context = useContext(FilteredCarsContext);
   const { sortArray } = context;
+
+  function handleChange(selectedOption) {
+    console.log(selectedOption.value);
+    sortArray(selectedOption.value);
+  }
 
   return (
     <Select
       options={options}
       styles={customStyles}
       defaultValue={defaultValue}
-      onClick={onClick}
       onChange={handleChange}
+      className={styles.wrapper}
     />
   );
 }
