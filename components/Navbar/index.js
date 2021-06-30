@@ -15,7 +15,7 @@ function Navbar({ handleShowSide, showSideNav }) {
             <li className={styles.logoWrapper}>
               <Link href="/">
                 <div className={styles.logo}>
-                  <Image src="/assets/logo.png" alt="ego" layout="fill" objectFit="contain" />
+                  <Image src="/assets/toyota-logo.jpg" alt="toyota" layout="fill" objectFit="contain" />
                 </div>
               </Link>
             </li>
